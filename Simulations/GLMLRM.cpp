@@ -755,7 +755,7 @@ List GLMLRM2(const arma::mat &X, const arma::mat &Y,
   double Q = 0.1;
   mat Z = rbinom(p*d, 1, Q); Z.reshape(p,d);
   double a0 = 0.001;
-  double tauC = 100;
+  double tauC = 1000;
   double tauC1 = 0.1;
   double varC = 1.0/tauC;
   
@@ -1076,7 +1076,7 @@ List GLMLRM1(const arma::mat &X, const arma::mat &Y,
   mat B = B0+C;
   double Q = 0.2;
   mat Z = rbinom(p*d, 1, Q); Z.reshape(p,d);
-  double tauC = 100;
+  double tauC = 1000;
   double tauC1 = 0.1;
   double a0 = 0.001;
   double varC = 1.0/tauC;
