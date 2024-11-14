@@ -41,7 +41,7 @@ List GLMLRM_normal2(mat X, mat Y0, int d1, int d2, int r1, int r2, int q, int nB
   mat O = eye(d,d);
   double tau_del1 = 1; double tau_u1 = 1; mat Tau_v1 = ones(d1,1);
   double tau_del2 = 1; double tau_u2 = 1; mat Tau_v2 = ones(d2,1);
-  double tau0 = 100; double tau_c = 0.1;
+  double tau0 = 1000; double tau_c = 0.1;
   
   vec sig = rgamma(d,a_sig,1.0/b_sig);           // diagonals of sigma_k^(-2), d x 1
   mat Sigma_xi = diagmat(1.0/sig);               // Sigma_xi
@@ -321,7 +321,7 @@ List GLMLRM_normal1(mat X, mat Y0, int r, int q, int nBurnin, int nCollect){
   // initialize precision parameters
   mat O = eye(d,d);
   double tau_del1 = 1; double tau_u1 = 1; mat Tau_v1 = ones(d,1);
-  double tau0 = 100; double tau1 = 0.1;
+  double tau0 = 1000; double tau1 = 0.1;
   
   vec sig = rgamma(d,a_sig,1.0/b_sig);           // diagonals of sigma_k^(-2), d x 1
   mat Sigma_xi = diagmat(1.0/sig);               // Sigma_xi
